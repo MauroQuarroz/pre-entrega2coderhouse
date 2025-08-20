@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 0 30px;
+  background-color: rgb(245, 228, 207);
+
+}
+
+/* grid del layout general ............................................................ */
+.todo{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  "encabezado"
+  "cuerpo"
+  "pie";
+  justify-content: center;
+}
+
+.navegador-general{
+grid-area: encabezado ;
+width: 100%;
+height: 100%;
+}
+
+.contenido-principal{
+grid-area: cuerpo;
+margin-top: 1.5em;
+
+
+}
+
+.pie{
+  grid-area: pie;
+
+}
+
+/* grid header (encabezado) ...........................................................*/
+
+
+.navegador-general{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-areas: 
+"cotizaciones logo compra"
+"producto logo sobrenos"
+"inicio inicio inicio";
+  width: 90%;
+  height: 100%;
+  max-height: 20vh;
+background-color: rgb(179, 115, 31);
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  
+}
+
+
+  .logo{
+    grid-area: logo;
+    height: 70px;
+    width: 100px;
+    max-height: 90%;
+    
+  
+  }
+
+  .cotiz{
+    grid-area: cotizaciones;
+
+  }
+  .compra{
+    grid-area: compra;
+    
+    
+}
+    
+ 
+  
+  .productos{
+    grid-area: producto;
+    width: 100%;
+    
+  }
+  .sobre-nosotros{
+    grid-area: sobrenos;
+    width: 100%;
+    
+  }
+  .inicio{
+    grid-area: inicio;
+    width: 100%;
+  
+  }
+  
+
+  .secciones-header{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1px;
+  }
+
+  .secciones-header li{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1px;}
+
+    /* sticky navegador..................................... */
+
+.navegador-general{
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+   
+/* grid footer.............................................................................. */
+     
+.pie {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+  grid-template-areas: 
+  "redes"
+  "nombre";
+  background-color: rgb(243, 213, 154);
+  border-radius: 10px;
+ 
+}
+
+.redes{
+  grid-area: redes;
+  
+}
+.fondo{
+  grid-area: nombre;
+  align-content: end;
+
+}
+  
+/* flex de redes */
+
+.redes{
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.redes a {
+  font-size: 2em;
+}
+
+
+/* fixed whatsapp ....................................................................... */
+
+.fijo{
+  position: fixed;
+  color: #034403;
+  bottom: 50px;
+  right: 10px;
+  z-index: 101;
+}
+
+
+/* configuraciones a ver ................................................................. */
+
+
+ul {
+  list-style: none;
+}
+
+ul>li>a {
+  color: rgb(5, 77, 17);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.pepemuebles {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  color: rgb(3, 3, 17);
+  
+}
+
+footer div a {
+  color: rgb(53, 39, 2);
+}
+
+section {
+  width: 80vw;
+}
+
+.salon-principal {
+  width: 80%;
+}
+
+/* hasta aqui configuraciones a ver */
+
+
+
+
+
+
+/* configuracion de imagen del header */
+header img {
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+  margin: auto;
+}
+
+
+
+
+/* bootstrap desde aca ...................................................................... */
+
+
+.navegador-general{
+  display: none;
+}
+
+.logo-altern{
+  width: 50px;
+  height: 50px;
+}
+
+/* diseño personalizado del navbar de bootstrap con color background personalizado............. */
+
+
+.diseño-personalizado{
+  background-color: rgb(179, 115, 31);
+  border-radius: 20px;
+}
+
+
+
+.tablet-phone{
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  
+}
+
+
+/* diseño pagina inicio................................................................................. */
+
+
+.seccion-inicio{
+  margin: auto;
+}
+
+/* diseño pagina sobre nosotros......................................................................... */
+
+.seccion-sobrenos{
+  margin: auto;
+  display: flex ;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+}
+
+.sobrenos-comienzos{
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  background-color: rgb(252, 212, 163);
+  width: 100%;
+  padding: .5rem;
+  justify-content: space-between;
+
+}
+
+.comienzos.txt{
+margin: auto;
+}
+
+.comienzos-img{
+  width: 100%;
+  margin: auto;
+
+}   
+
+.comienzos-img img{
+  max-width: 100%;
+}
+
+.titulo-sobrenos{
+  text-decoration: underline;
+}
+
+
+
+/* diseño pagina productos............................................................................... */
+
+.contenido-principal-productos{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+
+}
+
+.seccion-interior-img{
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  align-items: center;
+ background-color: black;
+
+
+}
+
+.seccion-exterior-img{
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  align-items: center;
+ background-color: black;
+
+}
+
+
+
+.seccion-interior-img img, .seccion-exterior-img img{
+  width: 30%;
+  object-fit: contain;
+  margin: auto;
+}
+
+
+
+/* diseño pagina cotizaciones............................................................................ */
+
+.seccion-cotizaciones{
+  background-color: rgb(240, 240, 220);
+  width: 80%;
+ 
+  height: auto;
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.formulario-cotizaciones input:focus{
+    border: .5em solid #034403;
+
+  }
+
+.formulario-cotizaciones{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+.crear{
+ display: flex;
+  flex-direction: column;
+  outline-color: rgb(2, 1, 0);
+  outline-width: 2px;
+}
+
+.tipo-mueble{
+ display: flex;
+  flex-direction: column;
+}
+
+.medida{
+ display: flex;
+  flex-direction: column;
+}
+
+.tipo-madera{
+ display: flex;
+  flex-direction: column;
+}
+ .color{
+ display: flex;
+  flex-direction: column;
+ }
+
+ .valor{
+ display: flex;
+  flex-direction: column;
+  
+ }
+
+ /* diseño pagina compra...................................................................... */
+
+
+ .seccion-compra{
+  display: flex;
+  flex-direction: column;
+  grid-area: 2em;
+  gap: 2em;
+  align-items: center;
+  margin: auto;
+ }
+
+ .lista-compra li::marker{
+color: #034403;
+font-size: 1.5em;
+ }
+
+  
+ .lista-compra-dos li::marker{
+color: #031a03;
+font-size: large;
+ }
+
+.label-compra input:focus{
+  border: .5em solid #034403;
+}
+
+.label-compra{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+
+}
+
+
+/* Medias queries desde aqui, solo para configurar algunos detalles sobre todo de imagenes y el fixed de whatsapp y lograr un resposive general */
+
+
+/* se eleigieron los anchos de panatalla de pantalla de una forma general (cuando crei oportuno) */
+
+@media screen and (max-width: 500px) {
+
+  .seccion-interior-img{
+  flex-direction: column;
+}
+
+.seccion-interior-img img, .seccion-exterior-img img{
+width: 90%;  
+}
+
+.seccion-exterior-img{
+    flex-direction: column;
+}
+
+.sobrenos-comienzos{  
+  flex-direction: column;
+}
+
+.fijo{
+   top: 10px;
+   left: 50%;
+/* esto lo aprendi de buscar nomas, me gusto el efecto */
+   transform: translateX(-50%);
+   /* tuve que cambiar esto porque me cliqueaba el fixed a lo largo de toda la pagina */
+  height: 2.5rem;
+  width: 2.5rem;
+  /* lo descubri por un background comentado debajo................................. */
+
+   /* background-color: black; */
+ 
+}
+
+
+}
+
+
+/* esta media querie es para pantallas grandes con el header y navegador que coincida con mi wireframe original */
+
+@media screen and (min-width: 1050px) {
+
+.tablet-phone {
+  display: none;
+}
+
+
+
+.navegador-general{
+  display: grid;
+}
+
+  
+
+
+}
