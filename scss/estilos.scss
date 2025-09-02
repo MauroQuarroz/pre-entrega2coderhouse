@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+$letraprinciapl: "Poppins", sans-serif;
+$titulo-ppal: "Roboto", sans-serif;
+$bg-encabezado: rgb(179, 115, 31);
+$bg-gral: rgb(245, 228, 207);
+$bg-pie: rgb(243, 213, 154);
+
+@mixin flex($direccion, $j-content, $align-item) {
+  display: flex;
+  flex-direction: $direccion;
+  justify-content: $j-content;
+  align-items: $align-item;
+}
+
+%barras-active {
+  input {
+    &:focus {
+      border: 0.5em solid #034403;
+    }
+  }
+} 
+
+//Se uso este keyframes para las imagenes de la seccion productos en la media querie max-width 500 (vista mobile)....
+
+@keyframes opacidad {
+  0% {
+    opacity: 0;
+    scale: .5;
+  }
+  50%{
+    opacity: .5;
+    scale: .75;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $letraprinciapl;
+  text-align: center;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 0 30px;
+  background-color: $bg-gral;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  width: 80vw;
+}
+
+ul > li > a {
+  color: rgb(5, 77, 17);
+  text-decoration: none;
+  font-size: 15px;
+}
+footer div a {
+  color: rgb(53, 39, 2);
+}
+
+.todo {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "encabezado"
+    "cuerpo"
+    "pie";
+  justify-content: center;
+
+  .navegador-general {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    grid-area: encabezado;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "cotizaciones logo compra"
+      "producto logo sobrenos"
+      "inicio inicio inicio";
+    width: 90%;
+    height: 100%;
+    max-height: 20vh;
+    background-color: $bg-encabezado;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
+
+    .logo {
+      grid-area: logo;
+      height: 60px;
+      width: 100px;
+      border-radius: 20px;
+      max-height: 90%;
+      transition: transform 2s;
+
+      // aqui una transicion con el logo del heaader con hover........................................
+      &:hover {
+        transform: scale(2) translate(0, 30px);
+      }      
+      .secciones-header {
+        padding: 0%;
+      }
+    }
+
+    .cotiz {
+      grid-area: cotizaciones;
+      .secciones-header {
+        padding: 0%;
+      }
+    }
+
+    .compra {
+      grid-area: compra;
+      .secciones-header {
+        padding: 0%;
+      }
+    }
+
+    .productos {
+      grid-area: producto;
+      width: 100%;
+      .secciones-header {
+        padding: 0%;
+      }
+    }
+
+    .sobre-nosotros {
+      grid-area: sobrenos;
+      width: 100%;
+      .secciones-header {
+        padding: 0%;
+      }
+    }
+
+    .inicio {
+      grid-area: inicio;
+      width: 100%;
+      .secciones-header {
+        padding: 0%;
+      }
+    }
+  }
+  .tablet-phone {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    display: none;
+    @media screen and (max-width: 1050px) {
+      display: block;
+    }
+
+    .diseño-personalizado {
+      background-color: $bg-encabezado;
+      border-radius: 20px;
+      .logo-altern {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: transform 2s;
+
+        // aqui una transicion con el logo del heaader con hover........................................
+
+        &:hover {
+          transform: scale(2) translate(0, 30px);
+        }   
+      }
+    }
+  }
+
+  .contenido-principal {
+    grid-area: cuerpo;
+    margin-top: 1.5em;
+
+    .pepemuebles {
+      font-family: $titulo-ppal;
+      font-size: 45px;
+      color: rgb(3, 3, 17);
+    }
+    .titulo-sobrenos {
+      text-decoration: underline;
+    }
+    .seccion-inicio {
+      margin: auto;
+
+      .salon-principal {
+        width: 80%;
+      }
+    }
+    .seccion-sobrenos {
+      @include flex(column, null, center);
+      margin: auto;
+      gap: 1rem;
+
+      .sobrenos-comienzos {
+        @include flex(row, space-between, null);
+        gap: 0.5rem;
+        background-color: rgb(252, 212, 163);
+        width: 100%;
+        padding: 0.5rem;
+
+        .comienzos.txt {
+          margin: auto;
+        }
+        .comienzos-img {
+          width: 100%;
+          margin: auto;
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .contenido-principal-productos {
+      @include flex(column, null, center);
+      gap: 5rem;
+
+      .seccion-interior-img {
+        @include flex(row, null, center);
+        gap: 0.5rem;
+        background-color: black;
+
+        img {
+          width: 30%;
+          object-fit: contain;
+          margin: auto;
+        }
+      }
+      .seccion-exterior-img {
+        @include flex(row, null, center);
+        gap: 0.5rem;
+        background-color: black;
+
+        img {
+          width: 30%;
+          object-fit: contain;
+          margin: auto;
+        }
+      }
+    }
+    .seccion-cotizaciones {
+      background-color: rgb(240, 240, 220);
+      width: 80%;
+      height: auto;
+      padding: 1px;
+      @include flex(column, null, center);
+      gap: 1rem;
+      border-radius: 10px;
+      margin: 0 auto;
+
+      .formulario-cotizaciones {
+        @include flex(column, null, null);
+        gap: 1rem;
+
+        .crear {
+          @include flex(column, null, null);
+          outline-color: rgb(2, 1, 0);
+          outline-width: 2px;
+          @extend %barras-active;
+        }
+
+        .tipo-mueble {
+          @include flex(column, null, null);
+        }
+
+        .medida {
+          @include flex(column, null, null);
+          @extend %barras-active;
+        }
+
+        .tipo-madera {
+          @include flex(column, null, null);
+        }
+        .color {
+          @include flex(column, null, null);
+        }
+
+        .valor {
+          @include flex(column, null, null);
+          @extend %barras-active;
+        }
+      }
+    }
+    .seccion-compra {
+      @include flex(column, null, center);
+      gap: 2em;
+      margin: auto;
+
+      .lista-compra {
+        li {
+          &::marker {
+            color: #034403;
+            font-size: 1.5em;
+          }
+        }
+        .lista-compra-dos {
+          li {
+            &::marker {
+              color: #031a03;
+              font-size: large;
+            }
+          }
+        }
+      }
+      .label-compra {
+        @include flex(column, center, null);
+        gap: 1em;
+        @extend %barras-active;
+      }
+    }
+  }
+
+  .pie {
+    grid-area: pie;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    grid-template-areas:
+      "redes"
+      "nombre";
+    background-color: $bg-pie;
+    border-radius: 10px;
+
+    .redes {
+      grid-area: redes;
+      @include flex(row, space-around, null);
+
+      a {
+        font-size: 2em;
+      }
+      .fijo {
+        position: fixed;
+        color: #034403;
+        bottom: 50px;
+        right: 10px;
+        z-index: 101;
+      }
+    }
+
+    .fondo {
+      grid-area: nombre;
+      align-content: end;
+    }
+  }
+}
+
+//La media quarie del encabezado la puse en el anidado general.
+//Leí que también es viable así que las distribuí.
+//Éstas estan anidadas pero en este apartado particular.
+@media screen and (max-width: 500px) {
+  .todo {
+    .contenido-principal {
+      .contenido-principal-productos {
+        .seccion-interior-img {
+          flex-direction: column;
+          img {
+            width: 90%;
+            animation: opacidad 2.5s linear;
+          }
+        }
+      }
+    }
+  }
+
+  .todo {
+    .contenido-principal {
+      .contenido-principal-productos {
+        .seccion-exterior-img {
+          flex-direction: column;
+          img {
+            width: 90%;
+            animation: opacidad 2.5s linear;
+           
+          }
+        }
+      }
+    }
+  }
+
+  .todo {
+    .contenido-principal {
+      .seccion-sobrenos {
+        .sobrenos-comienzos {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .pie {
+    .redes {
+      .fijo {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+  }
+}
