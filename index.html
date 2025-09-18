@@ -1,108 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pepe muebles - Decoraciones por catálogo y a medida.</title>
+    <meta
+      name="description"
+      content="Descubre nuestra vasta variedad de muebles y decoraciones para su hogar u oficina. Anímese a crear sus propios productos desde nuestra página y nosotros nos encargamos de hacerlos realidad. "
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" href="./assets/Img/logoPepe.icon.png" type="image/png">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/estilos.css" />
+  </head>
+  <body class="todo">
+    <!-- navbar bootstrap comienza aca ...................................... -->
+    <!-- Se hicieron algunas modificaciones desde el original de bootstrap ...-->
+    <header class="tablet-phone">
+      <nav class="navbar navbar-expand-lg diseño-personalizado">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              class="logo-altern"
+              src="./assets/Img/logoPepe.jpg"
+              alt="logo pepe muebleria"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link" href="./pages/sobreNosotros.html"
+                >Sobre nosotros</a
+              >
+              <a class="nav-link" href="./pages/productos.html">Productos</a>
+              <a class="nav-link" href="./pages/cotizaciones.html"
+                >Cotizaciones</a
+              >
+              <a class="nav-link" href="./pages/compra.html">Compra</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar bootstrap termina aca ...................................... -->
 
-<head>
-  <meta charset="UTF-8" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pepe Muebles</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./css/estilos.css" />
-</head>
-<body class="todo">
+    <!-- navegador personal para dispositivos grandes (trate de conservar el diseño del wireframe original).  -->
+    <header class="navegador-general">
+      <a href="">
+        <img
+          class="logo"
+          src="./assets/Img/logoPepe.jpg"
+          alt="logo pepe muebleria"
+        />
+      </a>
+      <nav class="cotiz config">
+        <ul class="secciones-header">
+          <li><a href="./pages/cotizaciones.html">COTIZACIONES</a></li>
+        </ul>
+      </nav>
+      <nav class="compra config">
+        <ul class="secciones-header">
+          <li><a href="./pages/compra.html">COMPRA</a></li>
+        </ul>
+      </nav>
 
+      <nav class="sobre-nosotros config">
+        <ul class="secciones-header">
+          <li><a href="./pages/sobreNosotros.html">SOBRE NOSOTROS</a></li>
+        </ul>
+      </nav>
+      <nav class="productos config">
+        <ul class="secciones-header">
+          <li><a href="./pages/productos.html">PRODUCTOS</a></li>
+        </ul>
+      </nav>
+      <nav class="inicio config">
+        <ul class="secciones-header">
+          <li><a href="#">INICIO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- aca empieza la seccion principal................................................... -->
 
-<!-- navbar bootstrap comienza aca ...................................... -->
- <!-- Se hicieron algunas modificaciones desde el original de bootstrap ...-->
-<header class="tablet-phone">
-<nav class="navbar navbar-expand-lg diseño-personalizado">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img class="logo-altern" src="./assets/Img/logoPepe.png" alt="logo pepe muebleria" /> </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        <a class="nav-link" href="./pages/sobreNosotros.html">Sobre nosotros</a>
-        <a class="nav-link" href="./pages/productos.html">Productos</a>
-        <a class="nav-link" href="./pages/cotizaciones.html">Cotizaciones</a>
-        <a class="nav-link" href="./pages/compra.html">Compra</a>
-        
+    <main class="contenido-principal">
+      <h1 class="pepemuebles">Pepe Muebles</h1>
+      <h2>Decoraciones</h2>
+      <section class="seccion-inicio">
+        <img
+          class="salon-principal"
+          src="./assets/Img/muebleriaActual.jpg"
+          alt="imagen panoramica del salon principal de exhibición"
+        />
+        <p>
+          Aparte de nuestros 3 salones de venta al público físicos, somos una
+          empresa con una fuerte presencia digital. Con un amplio compromiso
+          hacia las tendencias futuras, procuramos adaptarnos a las dinámicas de
+          demandas actuales y robustecer las facilidades de las compras a
+          distancias. encargándonos de otorgarles las facilidades de una
+          experiencia digna de los tiempos presentes como venideros.
+        </p>
+      </section>
+    </main>
+
+    <!-- aca comienza el footer.......................................................... -->
+
+    <footer class="pie">
+      <div class="redes">
+        <a href="https://www.facebook.com" target="_blank"
+          ><i class="bi bi-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com" target="_blank"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com" target="_blank"
+          ><i class="bi bi-youtube"></i
+        ></a>
+        <a href="https://www.linkedin.com" target="_blank"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <a class="fijo" href="https://api.whatsapp.com" target="_blank"
+          ><i class="bi bi-whatsapp"></i
+        ></a>
       </div>
-    </div>
-  </div>
-</nav>
-</header>
-<!-- navbar bootstrap termina aca ...................................... -->
-
-
-
-<!-- navegador personal para dispositivos grandes (trate de conservar el diseño del wireframe original).  -->
-  <header class="navegador-general">
-    <a href="">
-      <img class="logo" src="./assets/Img/logoPepe.png" alt="logo pepe muebleria" />
-    </a>
-    <nav class="cotiz config">
-      <ul class="secciones-header">
-        <li><a href="./pages/cotizaciones.html">COTIZACIONES</a></li>
-      </ul>
-    </nav>
-    <nav class="compra config">
-      <ul class="secciones-header">
-        <li><a href="./pages/compra.html">COMPRA</a></li>
-      </ul>
-    </nav>
-
-    <nav class="sobre-nosotros config">
-      <ul class="secciones-header">
-        <li><a href="./pages/sobreNosotros.html">SOBRE NOSOTROS</a></li>
-      </ul>
-    </nav>
-    <nav class="productos config">
-      <ul class="secciones-header">
-        <li><a href="./pages/productos.html">PRODUCTOS</a></li>
-      </ul>
-    </nav>
-    <nav class="inicio config">
-      <ul class="secciones-header">
-        <li><a href="#">INICIO</a></li>
-      </ul>
-    </nav>
-  </header>
-<!-- aca empieza la seccion principal................................................... -->
-
-  <main class="contenido-principal">
-    <h1 class="pepemuebles">Pepe Muebles</h1>
-    <h2>Decoraciones</h2>
-    <section class="seccion-inicio">
-      <img class="salon-principal" src="./assets/Img/muebleriaActual.png"
-        alt="imagen panoramica del salon principal de exhibición" />
-      <p>
-        Ponam in culpa idiota aliis pravitatis. Principium ponere culpam in se
-        justum praeceptum. Neque improperes et aliis qui non perfecte
-      </p>
-    </section>
-  </main>
-
-  <!-- aca comienza el footer.......................................................... -->
-
-  <footer class="pie">
-    <div class="redes">
-      <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
-      <a href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
-      <a class="fijo" href="https://api.whatsapp.com" target="_blank"><i class="bi bi-whatsapp"></i></a>
-    </div>
-    <div class="fondo">
-      <p>Pepe Muebles</p>
-    </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
-</body>
-
+      <div class="fondo">
+        <p>Pepe Muebles</p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
