@@ -79,7 +79,7 @@ ul > li > a {
 }
 .todo .navegador-general .logo {
   grid-area: logo;
-  height: 60px;
+  height: 50px;
   width: 100px;
   border-radius: 20px;
   max-height: 90%;
