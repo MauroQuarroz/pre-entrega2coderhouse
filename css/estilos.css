@@ -196,6 +196,7 @@ ul > li > a {
 .todo .contenido-principal .seccion-sobrenos .ubicacion ul li {
   list-style-type: disc;
   text-align: start;
+  margin-left: 3px;
 }
 .todo .contenido-principal .contenido-principal-productos {
   display: flex;
